@@ -1,10 +1,10 @@
 (function(){
   var fib = function(N) {
-    var ret = 1;
-    for (var i = 2; i <= N; i++) {
-      ret *= i;
+    if (N <= 1){
+      return 1;
+    } else {
+      return N * fib(N-1);
     }
-    return ret;
   };
-  console.log(fib(3));
+  console.log(fib(5));
 })()
